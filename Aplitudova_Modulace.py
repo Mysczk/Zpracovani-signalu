@@ -17,8 +17,10 @@ M_val = 4
 f = 10
 t = 10
 eps = 0
+partitions = 10000
 
-points = np.array(np.linspace(0, t, 10000))
+
+points = np.array(np.linspace(0, t, partitions))
 data = Am(A,f,points)
 data2 = Am_Mod(M(M_val, f, points), A, f, points)
 data3 = data+data2
